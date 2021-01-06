@@ -18,7 +18,13 @@ class ViewController: UIViewController {
         
         rollButton.layer.cornerRadius = 8
     }
-
-
+    
+    
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
+        let diceArray = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
+        
+        diceImageViewLeft.image = diceArray.randomElement()
+        diceImageViewRight.image = diceArray.randomElement()
+    }
 }
 
